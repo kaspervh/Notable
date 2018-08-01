@@ -1,0 +1,181 @@
+body{
+  margin: 0px;
+  background-color: #3f3f3f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*rules for the top part of the page*/
+
+.upper{
+  height: 55vh;
+  width: 100%;
+  background-image: url("note.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.upper .navbar{
+  height: 5vh;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+  display: flex;
+}
+
+.left, .right{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left{
+  padding-left: 30px;
+  color: white;
+  font-style: italic;
+}
+
+.right{
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.right ul{
+  height: 100%;
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+
+.right li{
+  border-right: 1px solid black;
+  min-width: 6%;
+  height: 100%;
+}
+
+.right li a {
+  text-decoration: none;
+  font-size: 100%;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  font-style: italic;
+}
+
+.right li a:hover{
+  background-color: white;
+  color: black;
+}
+
+.infobox {
+  height: 200px;
+  width: 300px;
+  position: absolute;
+  left: 150px;
+  top: 120px;
+  text-decoration: none;
+  font-size: 15px;
+  font-style: italic;
+  /* copied the text shadow from stack overflow*/
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: white;
+  //background-color: blue;
+  border-radius: 7px;
+}
+
+.infobox .buttonbox{
+  width: 100%;
+  display: flex;
+}
+
+.buttonone a{
+  padding: 15px 30px 15px 30px;
+  text-align: center;
+  text-align: justify;
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  font-style: italic;
+  color: white;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+.buttontwo a{
+  padding: 15px 37px 15px 37px;
+  text-align: center;
+  text-align: justify;
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  font-style: italic;
+  color: white;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+/*rules for the bottom part of the page*/
+
+
+.lower{
+  height: 45vh;
+  width: 100%;
+  display: flex;
+}
+
+.lower .box{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .right {
+    display: none;
+  }
+
+  .left{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .infobox {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: italic;
+    /* copied the text shadow from stack overflow*/
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    //background-color: blue;
+    border-radius: 7px;
+  }
+
+  .lower{
+    height: 30vh;
+    flex-flow: row wrap;
+  }
+
+  .lower .box{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
